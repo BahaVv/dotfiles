@@ -32,10 +32,17 @@ bindsym XF86AudioMute exec "amixer set Master toggle"
 bindsym XF86AudioLowerVolume exec "amixer set Master 10%-"
 bindsym XF86AudioRaiseVolume exec "amixer set Master 10%+"
 
+# Stupid alternative bindings because my Fn keys are broken in >linux 4.0
+
+bindsym $mod+F11 exec "xbacklight -10"
+bindsym $mod+F12 exec "xbacklight +10"
+bindsym Scroll_Lock exec "xbacklight +10"
+bindsym Insert exec "xbacklight -10"
+
 # mpc commands (I lack media keys!)
-bindsym $mod+Shift+F11 exec "mpc toggle"
-bindsym $mod+Shift+F12 exec "mpc next"
-bindsym $mod+Shift+F10 exec "mpc prev"
+bindsym $mod+F2 exec "mpc toggle"
+bindsym $mod+F1 exec "mpc prev"
+bindsym $mod+F3 exec "mpc next"
 
 # Terminal hotkey
 bindsym $mod+Return exec --no-startup-id urxvt
@@ -178,6 +185,7 @@ bar {
 assign [class="^Firefox$"] → 3:web
 assign [class="^Hexchat$"] → 2:chat
 assign [title="^htop$"] → 1:sys
+assign [class="^Pavucontrol$"] → 10:snd
 assign [title="^alsamixer$"] → 10:snd
 
 for_window [class="Wine$"] floating enable
@@ -185,6 +193,7 @@ for_window [class="Steam$"] floating enable
 
 # Auto-exec the following commands whenever i3 is run
 exec firefox
+exec pavucontrol
 exec --no-startup-id "urxvt -title htop -e htop"
 exec --no-startup-id "urxvt -title alsamixer -e alsamixer"
 exec hexchat
