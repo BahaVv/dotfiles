@@ -1,7 +1,7 @@
 #!/bin/bash
 
 xrdb .Xresources
-xcompmgr &
+compton --backend glx &
 nitrogen --restore
 xset +fp /usr/share/fonts/local
 xset fp rehash

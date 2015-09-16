@@ -29,8 +29,8 @@ workspace_auto_back_and_forth yes
 bindsym XF86MonBrightnessUp exec "xbacklight +10"
 bindsym XF86MonBrightnessDown exec "xbacklight -10"
 bindsym XF86AudioMute exec "amixer set Master toggle"
-bindsym XF86AudioLowerVolume exec "amixer set Master 10%-"
-bindsym XF86AudioRaiseVolume exec "amixer set Master 10%+"
+bindsym XF86AudioLowerVolume exec "amixer set Master 8%-"
+bindsym XF86AudioRaiseVolume exec "amixer set Master 8%+"
 
 # Stupid alternative bindings because my Fn keys are broken in >linux 4.0
 
@@ -45,7 +45,7 @@ bindsym $mod+F1 exec "mpc prev"
 bindsym $mod+F3 exec "mpc next"
 
 # Terminal hotkey
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec urxvt
 
 # Kill window
 bindsym $mod+c kill
@@ -144,7 +144,7 @@ bindsym $mod+Shift+Right move right
 # Resize window
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-		# Shrink/Grow container sizes: vim style, then cursor keys
+	# Shrink/Grow container sizes: vim style, then cursor keys
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -172,7 +172,7 @@ bar {
 	tray_output primary
 	font pango:gohufont 11px
 	status_command i3status
-	#status_command /home/xales/.config/i3status/i3status.sh
+	#status_command ~/.config/i3status/i3status.sh
 	#status_command python ~/.config/status.py
 	colors {
 		separator #666666
@@ -193,9 +193,7 @@ for_window [class="Steam$"] floating enable
 
 # Auto-exec the following commands whenever i3 is run
 exec firefox
-exec pavucontrol
 exec --no-startup-id "urxvt -title htop -e htop"
 exec --no-startup-id "urxvt -title alsamixer -e alsamixer"
 exec hexchat
 #exec --no-startup-id "urxvt -title ncmpcpp -e ncmpcpp"
-#exec --no-startup-id "i3-msg 'workspace 1:sys'"
