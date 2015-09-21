@@ -36,8 +36,8 @@ bindsym XF86AudioRaiseVolume exec "amixer set Master 8%+"
 
 bindsym $mod+F11 exec "xbacklight -10"
 bindsym $mod+F12 exec "xbacklight +10"
-bindsym Scroll_Lock exec "xbacklight +10"
-bindsym Insert exec "xbacklight -10"
+bindsym Scroll_Lock exec "xbacklight +5"
+bindsym Insert exec "xbacklight -5"
 
 # mpc commands (I lack media keys!)
 bindsym $mod+F2 exec "mpc toggle"
