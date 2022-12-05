@@ -1,0 +1,1 @@
+docker run -d --name plex --network=host --shm-size=32gb --restart unless-stopped -e TZ="America/New_York" -v $HOME/.plex/database:/config -v /mnt/red:/data/red --device=/dev/dri:/dev/dri plexinc/pms-docker

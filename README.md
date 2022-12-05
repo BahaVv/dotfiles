@@ -1,2 +1,2 @@
 # dotfiles
-My various linux config files for more bare-bones distros.
+Various personal linux config files and scripts

@@ -1,0 +1,1 @@
+docker run -d --net=host --restart unless-stopped --name=satisfactory-bcfg -h satisfactory-bcfg -e MAXPLAYERS=8 -e STEAMBETA=false -e AUTOPAUSE=true -e AUTOSAVEINTERVAL=600 -e AUTOSAVENUM=5 -e NETWORKQUALITY=3 -e SERVERBEACONPORT=15000 -e SERVERGAMEPORT=7827 -e SERVERQUERYPORT=15777 -v ~/.satisfactory-bcfg:/config  wolveix/satisfactory-server:latest
