@@ -4,7 +4,7 @@ export XDG_SESSION_TYPE=x11
 export DISPLAY=:0
 cat >> /root/.xinitrc << EOF
 nvidia-settings -q fans
-nvidia-settings -a [gpu:0]/GPUFanControlState=1 -a [fan:0]/GPUTargetFanSpeed=80
-nvidia-settings -a [gpu:1]/GPUFanControlState=1 -a [fan:1]/GPUTargetFanSpeed=80
+nvidia-settings -a [gpu:0]/GPUFanControlState=1 -a [fan:0]/GPUTargetFanSpeed=50
+nvidia-settings -a [gpu:1]/GPUFanControlState=1 -a [fan:1]/GPUTargetFanSpeed=65
 EOF
 sudo startx -- :0
